@@ -24,6 +24,8 @@ body {
   color: white; }
 
 .main-page__items {
+  display: flex;
+  flex-direction: column;
   padding: 10px 0; }
 
 .main-page__item {
@@ -55,7 +57,9 @@ body {
   color: white; }
 
 .main-page__input {
-  padding: 10px 550px 10px 15px; }
+  width: 58%;
+  height: 40px;
+  padding: 0 0 0 10px; }
 
 .main-page__form-selector {
   display: flex;
@@ -65,20 +69,20 @@ body {
   padding: 0 15px 0 0; }
 
 .main-page__selector {
-  padding: 10px 56px 10px 5px; }
+  padding: 10px 54px 10px 5px; }
 
 .main-select {
   padding: 10px 140px 10px 15px; }
 
 .page-select {
-  padding: 10px 220px 10px 10px; }
+  padding: 10px 215px 10px 10px; }
 
 .main-page__form {
   padding: 10px 0 0 0; }
 
 .main-page__input-2 {
-  width: 150px;
-  padding: 10px 0px 8px 10px; }
+  width: 145px;
+  padding: 10px 0px 10px 10px; }
 
 .main-page__mix {
   display: flex; }
@@ -95,12 +99,17 @@ body {
 
 .main-page__radio {
   display: flex;
-  align-items: center;
   background: #4B4B4F;
-  padding: 15px 0 15px 10px; }
+  padding: 15px 15px 15px 10px; }
 
 .main-page__component {
-  width: 61%;
+  width: 60%;
+  padding: 5px 0 0 0; }
+
+.main-page__component:last-child {
+  padding: 10px 0 0 0; }
+
+.main-page__component:first-child {
   padding: 10px 0 0 0; }
 
 .main-page__text-subtitle {
@@ -108,7 +117,8 @@ body {
   justify-content: space-between; }
 
 .input-text {
-  padding: 0 400px 0 15px;
+  flex: auto;
+  margin: 0 0 0 15px;
   color: #CFCFCF;
   background: initial;
   border: 0;
@@ -119,6 +129,29 @@ body {
   background: #717174;
   border: 0;
   padding: 4px 8px 4px 8px;
+  color: white; }
+
+.input-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); }
+
+.textarea-commit {
+  width: 98.5%;
+  height: 80px;
+  resize: none;
+  padding: 10px 0 0 10px; }
+
+.main-page__item-description {
+  background: #4B4B4F;
+  padding: 25px;
+  width: 270px;
+  align-self: flex-end;
+  position: relative;
+  bottom: 985px;
+  right: 150px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); }
+
+.item-description__title {
   color: white; }
 
 .form-radio-hidden {
@@ -213,21 +246,21 @@ body {
   background-size: 50% 50%; }
 
 .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #b3d7ff; }
+  border-color: #EF483E; }
 
 .custom-checkbox:not(:disabled):active + label::before {
-  background-color: #b3d7ff;
-  border-color: #b3d7ff; }
+  background-color: #EF483E;
+  border-color: #EF483E; }
 
 .custom-checkbox:focus + label::before {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
+  box-shadow: 0 0 0 0.2rem rgba(239, 72, 62, 0.25); }
 
 .custom-checkbox:focus:not(:checked) + label::before {
-  border-color: #80bdff; }
+  border-color: #EF483E; }
 
 .custom-checkbox:checked + label::before {
-  border-color: #0b76ef;
-  background-color: #0b76ef;
+  border-color: #EF483E;
+  background-color: #EF483E;
   background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 8 8%27%3e%3cpath fill=%27%23fff%27 d=%27M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z%27/%3e%3c/svg%3e"); }
 
 .custom-checkbox:disabled + label::before {
@@ -236,14 +269,36 @@ body {
 .checkbox {
   margin: 1em 0 1em 0; }
 
-@media (min-width: 320px) and (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 425px) {
   .main-page__subhead {
     font-size: 32px;
     font-weight: 400; }
   .main-page__input {
-    padding: 10px 135px 10px 15px; }
+    width: 94.5%;
+    height: 30px; }
   .main-page__component {
     width: 100%; }
   .input-text {
-    padding: 0 0 0 15px; } }
+    margin: 0; }
+  .textarea-commit {
+    width: 95%;
+    padding: 10px 5px 0 10px; }
+  .main-page__item-description {
+    align-self: auto;
+    bottom: 0;
+    right: 0; } }
+
+@media (width: 375px) {
+  .main-page__component {
+    width: 85%; } }
+
+@media (width: 425px) {
+  .main-page__component {
+    width: 75%; } }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .main-page__elem {
+    width: 85%; }
+  .main-page__item-description {
+    right: 30px; } }
 

@@ -1,5 +1,5 @@
 $bg:#343539;
-$tooltip:#4B4B4F;
+$upperbg:#4B4B4F;
 $color: white;
 $bred: #EF483E;
 $ph: #CFCFCF;
@@ -32,6 +32,8 @@ body {
 }
 
 .main-page__items{
+    display: flex;
+    flex-direction: column;
     padding: 10px 0;
 }
 
@@ -73,7 +75,9 @@ body {
 }
 
 .main-page__input{
-    padding: 10px 550px 10px 15px;
+    width: 58%;
+    height: 40px;
+    padding: 0 0 0 10px;
 }
 
 .main-page__form-selector{
@@ -86,7 +90,7 @@ body {
 }
 
 .main-page__selector{
-    padding: 10px 56px 10px 5px;
+    padding: 10px 54px 10px 5px;
 }
 
 .main-select{
@@ -94,7 +98,7 @@ body {
 }
 
 .page-select{
-    padding: 10px 220px 10px 10px;
+    padding: 10px 215px 10px 10px;
 }
 
 .main-page__form{
@@ -102,8 +106,8 @@ body {
 }
 
 .main-page__input-2{
-    width: 150px;
-    padding: 10px 0px 8px 10px;    
+    width: 145px;
+    padding: 10px 0px 10px 10px;    
 }
 
 .main-page__mix{
@@ -125,13 +129,20 @@ body {
 
 .main-page__radio{
     display: flex;
-    align-items: center;
-    background: $tooltip;
-    padding: 15px 0 15px 10px;
+    background: $upperbg;
+    padding: 15px 15px 15px 10px;
 }
 
 .main-page__component{
-    width: 61%;
+    width: 60%;
+    padding: 5px 0 0 0;
+}
+
+.main-page__component:last-child{
+    padding: 10px 0 0 0;
+}
+
+.main-page__component:first-child{
     padding: 10px 0 0 0;
 }
 
@@ -141,7 +152,8 @@ body {
 }
 
 .input-text{
-    padding: 0 400px 0 15px;
+    flex: auto;
+    margin: 0 0 0 15px;
     color: $ph;
     background: initial;
     border: 0;
@@ -153,6 +165,37 @@ body {
     background: $btn;
     border: 0;
     padding: 4px 8px 4px 8px;
+    color: $color;
+}
+
+.input-btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 10%);
+}
+
+
+
+.textarea-commit{
+    width: 98.5%;
+    height: 80px;
+    resize: none;
+
+    padding: 10px 0 0 10px;
+}
+
+.main-page__item-description{
+    background: #4B4B4F;
+    padding: 25px;
+    width: 270px;
+    align-self: flex-end;
+    position: relative;
+    bottom: 985px;
+    right: 150px;
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.item-description__title{
     color: $color;
 }
 
@@ -192,7 +235,7 @@ body {
     box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
 }
 .form-radio-hidden input:checked + .radio{
-    border-color: $tooltip;
+    border-color: $upperbg;
     background-color: $bred;
     box-shadow: inset 1px 2px 3px 0 rgba(0,0,0,0.1);
     cursor: default;
@@ -203,7 +246,7 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 8px;
-    background-color: $tooltip;
+    background-color: $upperbg;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -225,8 +268,6 @@ body {
     color: #555;
     cursor: default;
 }
-
-
 
 
 
@@ -256,25 +297,25 @@ body {
 }
 
 .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-    border-color: #b3d7ff;
+    border-color: $bred;
 }
 
 .custom-checkbox:not(:disabled):active+label::before {
-    background-color: #b3d7ff;
-    border-color: #b3d7ff;
+    background-color: $bred;
+    border-color: $bred;
 }
 
 .custom-checkbox:focus+label::before {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(239, 72, 62, 0.25);
 }
 
 .custom-checkbox:focus:not(:checked)+label::before {
-    border-color: #80bdff;
+    border-color: $bred;
 }
 
 .custom-checkbox:checked+label::before {
-    border-color: #0b76ef;
-    background-color: #0b76ef;
+    border-color: $bred;
+    background-color: $bred;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
@@ -286,7 +327,7 @@ body {
     margin: 1em 0 1em 0;
 }
 
-@media (min-width: 320px) and (max-width: 426px){
+@media (min-width: 320px) and (max-width: 425px){
 
     .main-page__subhead{
         font-size: 32px;
@@ -294,7 +335,8 @@ body {
     }
 
     .main-page__input{
-        padding: 10px 135px 10px 15px;
+        width: 94.5%;
+        height: 30px;
     }
 
     .main-page__component{
@@ -302,6 +344,38 @@ body {
     }
     
     .input-text{
-        padding: 0 0 0 15px;
+        margin: 0;
+    }
+
+    .textarea-commit{
+        width: 95%;
+        padding: 10px 5px 0 10px;
+    }
+
+    .main-page__item-description{
+        align-self: auto;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media (width: 375px){
+    .main-page__component{
+        width: 85%;
+    }
+}
+
+@media (width: 425px){
+    .main-page__component{
+        width: 75%;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+    .main-page__elem{
+        width: 85%;
+    }
+    .main-page__item-description{
+        right: 30px;
     }
 }
