@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="main-page main-page__container">
+        <div class="main-page__header">
+            <h1 class="main-page__subhead">FTL: Прямая машина</h1>
+        </div>
+        <div class="main-page__items">
+            <div class="main-page__item">
+                <div class="main-page__elem">
+                    <div class="main-page__text">
+                        <div class="main-page__number">1</div>
+                        <h2 class="main-page__title">Маршрут</h2>
+                    </div>
+                    <form action="" class="main-page__form-input">
+                        <div class="main-page__inputs">
+                            <p class="main-page__subtitle">Откуда</p>
+                            <input type="text" class="main-page__input">
+                        </div>
+                        <div class="main-page__inputs">
+                            <p class="main-page__subtitle">Куда</p>
+                            <input type="text" class="main-page__input">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="main-page__item">
+                <div class="main-page__elem">
+                    <div class="main-page__text">
+                        <div class="main-page__number">2</div>
+                        <h2 class="main-page__title">Транспорт</h2>
+                    </div>
+                    <form action="" class="main-page__form-selector">
+                        <div class="main-page__selectors">
+                            <p class="main-page__subtitle">Грузоподъёмность</p>
+                            <select class="main-page__selector" name="" id="">
+                                <option selected disabled>Не выбрана</option>
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                                <option value="3">Вариант 3</option>
+                                <option value="4">Вариант 4</option>
+                                <option value="5">Вариант 5</option>
+                            </select>
+                        </div>
+                        <div class="main-page__selectors">
+                            <p class="main-page__subtitle">Способ погрузки</p>
+                            <select class="main-page__selector" name="" id="">
+                                <option selected value="">Задняя</option>
+                                <option value="">Передняя</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="main-page__item">
+                <div class="main-page__elem">
+                    <div class="main-page__text">
+                        <div class="main-page__number">3</div>
+                        <h2 class="main-page__title">Груз</h2>
+                    </div>
+                    <form action="" class="main-page__form">
+                        <p class="main-page__subtitle">Тип груза</p>
+                        <select name="" id="" class="page-select">
+                            <option selected disabled value="">Не Выбран</option>
+                            <option value="">Вариант 1</option>
+                            <option value="">Вариант 2</option>
+                        </select>
+                        <div class="main-page__mix">
+                            <div class="page__mix">
+                                <p class="main-page__subtitle">Класс опасности</p>
+                                <select name="" id="" class="page-selector">
+                                    <option selected value="">Класс 5 — Окисляющие вещества и органические перекиси
+                                    </option>
+                                    <option value="">Вариант 2</option>
+                                    <option value="">Вариант 3</option>
+                                </select>
+                            </div>
+                            <div class="page__mix">
+                                <p class="main-page__subtitle">Объявленная ценность, ₽</p>
+                                <input value="≥ 1" type="text" class="main-page__input-2">
+                            </div>
+                        </div>
+                        <div class="page-checkbox">
+                            <div class="checkbox">
+                                <input class="custom-checkbox" type="checkbox" id="color-1" name="color-1"
+                                    value="indigo">
+                                <label for="color-1">Требуется температурный режим</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="main-page__item">
+                <div class="main-page__elem">
+                    <div class="main-page__text">
+                        <div class="main-page__number">4</div>
+                        <h2 class="main-page__title">Время</h2>
+                    </div>
+                    <div class="main-page__components">
+                        <form action="" class="main-page__form-component">
+                            <div class="main-page__component">
+                                <div class="main-page__text-subtitle">
+                                    <div class="main-page__subtitle">Когда прибыть на точку</div>
+                                    <div class="main-page__subtitle">700 км в день</div>
+                                </div>
+                                <div class="main-page__radio">
+                                    <label for="radio-one" class="form-radio-hidden">
+                                        <input type="radio" name="demo" value="one" id="radio-one" checked>
+                                        <span class="radio"></span>
+                                    </label>
+                                    <input class="input-text" type="text" name="" id="" value="Адрес не указан">
+                                    <input class="input-btn" type="button" value="Не выбрано" class="main-page__button">
+                                </div>
+                            </div>
+                            <div class="main-page__component">
+                                <div class="main-page__radio">
+                                    <label for="radio-two" class="form-radio-hidden">
+                                        <input type="radio" name="demo" value="one" id="radio-two">
+                                        <span class="radio"></span>
+                                    </label>
+                                    <input class="input-text" type="text" name="" id="" value="Адрес не указан">
+                                    <input class="input-btn" type="button" value="Не выбрано" class="main-page__button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./assets/scripts.js"></script>
+</body>
+
+</html>
